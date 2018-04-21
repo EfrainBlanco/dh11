@@ -1,0 +1,17 @@
+int humo = A0;    
+int ledPin = 13;      // select the pin for the LED
+int valorHumo = 0;  // variable to store the value coming from the sensor
+
+void setup() {
+  // declare the ledPin as an OUTPUT:
+  pinMode(ledPin, OUTPUT);
+}
+
+void loop() {
+  Serial.begin(9600); 
+ valorHumo = analogRead(humo)/4;
+  Serial.print( "Lectura humo" );
+  Serial. print (valorHumo);
+  Serial. print (",");
+
+}
